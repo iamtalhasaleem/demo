@@ -36,7 +36,7 @@ prompt APPLICATION 101 - dev
 --   Exported By:     MAXPRINT_DEV
 --   Flashback:       0
 --   Export Type:     Application Export
---     Pages:                      8
+--     Pages:                      9
 --       Items:                    9
 --       Processes:                6
 --       Regions:                  3
@@ -107,7 +107,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_value_01=>'dev'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>7
-,p_version_scn=>63998404
+,p_version_scn=>64018436
 ,p_print_server_type=>'NATIVE'
 ,p_file_storage=>'DB'
 ,p_is_pwa=>'Y'
@@ -143,7 +143,7 @@ wwv_flow_imp_shared.create_list(
  p_id=>wwv_flow_imp.id(32599979922630207)
 ,p_name=>'Navigation Menu'
 ,p_list_status=>'PUBLIC'
-,p_version_scn=>63998404
+,p_version_scn=>64018436
 );
 wwv_flow_imp_shared.create_list_item(
  p_id=>wwv_flow_imp.id(32611739873630271)
@@ -197,6 +197,15 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_icon=>'fa-file-o'
 ,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
 ,p_list_item_current_for_pages=>'6'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(73547347774338409)
+,p_list_item_display_sequence=>70
+,p_list_item_link_text=>'C'
+,p_list_item_link_target=>'f?p=&APP_ID.:7:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_icon=>'fa-file-o'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'7'
 );
 end;
 /
@@ -3570,6 +3579,19 @@ wwv_flow_imp_page.create_page(
 );
 end;
 /
+prompt --application/pages/page_00007
+begin
+wwv_flow_imp_page.create_page(
+ p_id=>7
+,p_name=>'C'
+,p_alias=>'C'
+,p_step_title=>'C'
+,p_autocomplete_on_off=>'OFF'
+,p_page_template_options=>'#DEFAULT#'
+,p_protection_level=>'C'
+);
+end;
+/
 prompt --application/pages/page_09999
 begin
 wwv_flow_imp_page.create_page(
@@ -3793,4 +3815,4 @@ prompt  ...done
 
 
 
--- sqlcl_snapshot {"hash":"c1927e6ac791ebd8c6c57f269eec623cc8afe336","type":"APEX_APPLICATIONS","name":"f101","schemaName":"MAXPRINT_DEV","sxml":""}
+-- sqlcl_snapshot {"hash":"5672d22a7c929a8b266cf292745bd44108156ba4","type":"APEX_APPLICATIONS","name":"f101","schemaName":"MAXPRINT_DEV","sxml":""}
