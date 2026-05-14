@@ -3,6 +3,5 @@
                    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
-<!--CHANGES-->
-<include file="changes/dev/stage.changelog.xml" relativeToChangelogFile="true"/>
+<include file="maxprint_dev/tables/b.sql" relativeToChangelogFile="true"/>
 </databaseChangeLog>
